@@ -9,7 +9,7 @@ echo "Enter your choice
 		1. Addition
 		2. Subtraction 
 		3. Multiplication
-		4444ivision"
+		4. Division"
 read n;
 
 case $n in
