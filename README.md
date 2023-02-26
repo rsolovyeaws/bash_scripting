@@ -2,6 +2,14 @@
 
 Repository for scripting tutorials and exercises.
 
+```
+#!/bin/bash
+set -x #debud 
+```
+Debug from command line:
+
+bash -vx sample.sh
+
 comparison operators
 gt, ge, eq, le, lt, ne 
 
@@ -15,8 +23,35 @@ redirection of the output
 2> - append error and output to the file
 2> /dev/null - redirect error to "nothing" / don't show output 
 
+if
+```
 if [ condition ]
 then
 else
 fi
+```
+while
+```
+#initialize
+i=0
+while [ $i -lt 10 ]
+do
+echo $i
+# update_condition
+i=`expr $i + 1`
+done
+```
+for 
+```
+#!/bin/bash
 
+for i in 1 2 3 4 5
+do
+echo $i
+done
+
+for ((i=0;i<5;i++))
+{
+echo $i
+}
+```
