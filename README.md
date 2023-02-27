@@ -20,6 +20,7 @@ comparison operators
 ```
 $# --> count command line args
 $? --> return code of the command (0 = success)
+$@ --> list of command line arguments 
 files=$(ls) --> subshell runs comand and stores output into a variable 
 ```
 redirection of the output
