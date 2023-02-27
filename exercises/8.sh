@@ -6,24 +6,27 @@
 # Exercise_7 - Modify the previous script to that it accepts the file or directory name as an argument instead of prompting the user to enter it.
 # Exercise_8 - Modify the previous script to accept an unlimited number of files and directories as arguments.
 
-if [ $# -ne 1 ]
+if [ $# -eq 0 ]
 then 
     echo "Invalid number of arguments"
     exit 1;
 fi
 
-name=$1
+names=$@
 
-if [ -f $name ]
-then 
-   echo "$name is a regular file"
+for name in $names
+do
+    if [ -f $name ]
+    then 
+        echo "$name is a regular file"
 
-elif [ -d $name ]
-then
-   echo "$name is a directory"
+    elif [ -d $name ]
+    then
+        echo "$name is a directory"
 
-else
-   echo "$name is another file type"
-fi
+    else
+        echo "$name is another file type"
+    fi
 
-ls -l $name
+    ls -l $name
+done
