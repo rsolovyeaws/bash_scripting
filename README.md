@@ -73,3 +73,10 @@ case $choice in
 ecas
 ```
 
+for loop iterating through files
+```bash
+for file in logfiles/*.log
+do
+        tar -czvf $file.tar.gz $file
+done
+```
