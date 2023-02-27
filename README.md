@@ -11,17 +11,24 @@ Debug from command line:
 bash -vx sample.sh
 
 comparison operators
-gt, ge, eq, le, lt, ne 
+```
+-gt, -ge, -eq, -le, -lt, -ne 
+-f #(true if file is present at the location) 
+-d #(true if directory is present at the location)
+```
 
-$# - count command line args
-$? - return code of the command
-  - 0 = success
-
+```
+$# --> count command line args
+$? --> return code of the command (0 = success)
+files=$(ls) --> subshell runs comand and stores output into a variable 
+```
 redirection of the output
+```
 > - write output to file (overwrites), but show error 
 >> - append output to file
 2> - append error and output to the file
 2> /dev/null - redirect error to "nothing" / don't show output 
+```
 
 if
 ```
@@ -55,3 +62,14 @@ for ((i=0;i<5;i++))
 echo $i
 }
 ```
+
+case
+```bash
+choice=1
+case $choice in
+  1) echo "one" ;;
+  2) echo "two" ;;
+  *) echo "$choice is not a valid choice"
+ecas
+```
+
