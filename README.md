@@ -97,8 +97,8 @@ sed -i 's/old/new/' file # wil replace every occurance of old to new in the file
 
 awk
 ```bash
-awk '{print} file # print the contents of the file 
-awk '{print $1} file # print first word of the file (default delimiter is ' '}
+awk '{print}' file # print the contents of the file 
+awk '{print $1}' file # print first word of the file (default delimiter is ' '}
 awk -F':' '{print $1,$7}' /etc/passwd # delimiter is set to : print the first and the seventh word
 ```
 
