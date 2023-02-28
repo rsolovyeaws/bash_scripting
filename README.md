@@ -22,6 +22,7 @@ $# --> count command line args
 $? --> return code of the command (0 = success)
 $@ --> list of command line arguments 
 files=$(ls) --> subshell runs comand and stores output into a variable 
+length=${#string_var} --> stores the length of the string into variable
 ```
 redirection of the output
 ```
