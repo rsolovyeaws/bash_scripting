@@ -100,5 +100,7 @@ awk
 awk '{print}' file # print the contents of the file 
 awk '{print $1}' file # print first word of the file (default delimiter is ' '}
 awk -F':' '{print $1,$7}' /etc/passwd # delimiter is set to : print the first and the seventh word
+awk -F '/' '/^\// {print $NF}' /etc/shells | uniq # pipe the last column from /etc/shells separated by /, and print unique values
+awk '$1 ~ /^[#]/ {print $0}' file # print every line that staets with # from the file
 ```
 
